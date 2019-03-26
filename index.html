@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Word Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+  
+<body class="bg-dark text-white">
+  
+  <header class="text-center bg-success p-2 mb-4">
+    <h1 class="display-4">WordFinder</h1>
+  </header>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        
+        <!--Instructions-->
+        <p class="lead text-center mb-4">Enter some random paragraph below and then search a word in the search field.</p>
+        
+        <!--Textarea-->
+        <textarea class="form-control form-control-lg mb-4" id="paragraph" rows="6" placeholder="Enter a random paragraph..." autofocus></textarea>
+        
+        <!--Search word-->
+        <div class="input-group input-group-lg mb-4"> 
+          <input type="text" class="form-control form-control-lg" id="search" placeholder="Search a word...">
+          <div class="input-group-append">
+            <button class="btn btn-warning btn-lg" type="button" id="button" onclick="findWord()">Search</button>
+            <button class="btn btn-secondary btn-lg" type="button" onclick="reset()">Reset</button>
+          </div>
+        </div>
+        
+        <!--Result table-->
+        <table class="table table-bordered text-center" id="table">
+          
+          <thead class="bg-success text-dark">
+            <tr>
+              <th>Word</th>
+              <th>Found</th>
+              <th>Times</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td id="word">-</td>
+              <td id="found">-</td>
+              <td id="times">-</td>
+            </tr>
+          </tbody>
+          
+        </table>
+        
+      </div>
+    </div>
+  </div>
+  
+  <footer class="text-center p-2">
+    <p class="text-secondary mb-0">Designed by <i>Dheeraj Mahra</i> on 1st March, 2019</p>
+  </footer>
+  
+  <script src="js/script.js"></script>
+</body>
+  
+</html>
